@@ -1,6 +1,4 @@
-import { Link } from "@nextui-org/link";
-
-import { Navbar } from "@/components/navbar";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export default function DefaultLayout({
     children,
@@ -9,20 +7,15 @@ export default function DefaultLayout({
 }) {
     return (
         <div className="relative flex flex-col h-screen">
-            <Navbar />
             <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
                 {children}
+                <ThemeSwitch className="fixed bottom-14 right-10 z-50" size={35}></ThemeSwitch>
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-                <Link
-                    isExternal
-                    className="flex items-center gap-1 text-current"
-                    href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
-                    title="nextui.org homepage"
-                >
-                    <span className="text-default-600">Powered by</span>
-                    <p className="text-primary">NextUI</p>
-                </Link>
+            <footer className="w-full flex items-center justify-center py-3 bg-background z-50">
+                <span className="text-default-600">&nbsp;</span>
+            </footer>
+            <footer className="w-full flex items-center justify-center py-3 fixed bottom-0 bg-background z-50">
+                <span className="text-default-600">&copy; SSingh.Net</span>
             </footer>
         </div>
     );

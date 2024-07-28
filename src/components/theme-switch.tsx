@@ -9,11 +9,13 @@ import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 export interface ThemeSwitchProps {
     className?: string;
     classNames?: SwitchProps["classNames"];
+    size: number;
 }
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     className,
     classNames,
+    size
 }) => {
     const [isMounted, setIsMounted] = useState(false);
 
@@ -72,10 +74,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
                     ),
                 })}
             >
+                
                 {isSelected ? (
-                    <MoonFilledIcon size={22} />
+                    <MoonFilledIcon size={size}/>
                 ) : (
-                    <SunFilledIcon size={22} />
+                    <SunFilledIcon size={size} />
                 )}
             </div>
         </Component>
