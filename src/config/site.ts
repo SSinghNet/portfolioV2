@@ -8,6 +8,37 @@ export const siteConfig = {
         email: "sumeet605@gmail.com",
         linkedin: "https://www.linkedin.com/in/sumeet-singh-net",
     },
+    skills: [
+        { name: "PHP", image: "images/php.png" },
+
+        { name: "React", image: "images/react.png" },
+        { name: "WordPress", image: "images/wordpress.png" },
+        { name: "CSS", image: "images/css.png" },
+        { name: "Tailwind", image: "images/tailwind.png" },
+
+        { name: "Python", image: "images/python.png" },
+        { name: "Java", image: "images/java.png" },
+        { name: "C", image: "images/c.png" },
+
+        { name: "Javascript", image: "images/javascript.png" },
+        { name: "Typescript", image: "images/typescript.png" },
+        { name: "Node.js", image: "images/nodejs.png" },
+        { name: "Next.js", image: "images/nextjs.png" },
+        { name: "Express.js", image: "images/expressjs.png" },
+        
+        { name: "SQL", image: "images/sql.png" },
+        { name: "Firebase", image: "images/firebase.png" },
+        { name: "MySQL", image: "images/mysql.png" },
+        { name: "MongoDB", image: "images/mongodb.png" },
+        { name: "AWS", image: "images/aws.jpg" },
+        
+        { name: "Flutter", image: "images/flutter.png" },
+        
+        { name: "GitHub", image: "images/github.png" },
+        { name: "Linux", image: "images/linux.png" },
+        
+        // { name: "", image: "images/.png"},
+    ],
     projects: {
         professional: [
             {

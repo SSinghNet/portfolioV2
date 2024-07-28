@@ -6,8 +6,9 @@ import { ProjectProps, siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { EmailIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import { Card, Divider } from "@nextui-org/react";
+import { Card, CardHeader, Divider } from "@nextui-org/react";
 import ProjectCard from "@/components/projectCard";
+import SkillCard from "@/components/skillCard";
 
 export default function IndexPage() {
     return (
@@ -100,6 +101,29 @@ export default function IndexPage() {
                 </div>
             </section>
             */}
+            <Divider className="my-6" />
+
+            <section className="group flex items-center justify-center w-full">
+                <div className="inline-block rounded-md w-full my-0 m-5 text-center justify-center border-none outline-none">
+                    <Card className="p-5 py-8 pt-4 bg-opacity-0 rounded-md border-none outline-none shadow-none">
+                        <CardHeader className="text-center justify-center">
+                            <h1 className={"text-3xl font-bold"}>
+                                Skills
+                            </h1>
+                        </CardHeader>
+                        <div className="m-1 md:m-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 xl:grid-cols-9 gap-4 justify-center">
+                            {siteConfig.skills.map(({ name, image }: { name: string, image: string }) => (
+                                <div className="flex justify-center">
+                                <SkillCard
+                                    name={name}
+                                    image={image}
+                                    />
+                                </div>    
+                            ))}
+                        </div>
+                    </Card>
+                </div>
+            </section>
 
             <Divider className="my-6" />
             <section className="my-4 group w-full">
