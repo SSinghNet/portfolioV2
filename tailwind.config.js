@@ -17,13 +17,12 @@ module.exports = {
         themes: {
             light: {
                 colors: {
-
+                    background: "#EFEFEF",
                 },
             },
             dark: {
                 colors: {
                     background: "#0f0f0f"
-
                 },
             },
         },

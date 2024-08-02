@@ -6,7 +6,7 @@ import { ProjectProps, siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { EmailIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import { Card, CardHeader, Divider } from "@nextui-org/react";
+import { Card, Divider, Tab, Tabs } from "@nextui-org/react";
 import ProjectCard from "@/components/projectCard";
 import SkillCard from "@/components/skillCard";
 
@@ -104,21 +104,19 @@ export default function IndexPage() {
             <Divider className="my-6" />
 
             <section className="group flex items-center justify-center w-full">
-                <div className="inline-block rounded-md w-full my-0 m-5 text-center justify-center border-none outline-none">
-                    <Card className="p-5 py-8 pt-4 bg-opacity-0 rounded-md border-none outline-none shadow-none">
-                        <CardHeader className="text-center justify-center">
-                            <h1 className={"text-3xl font-bold"}>
-                                Skills
-                            </h1>
-                        </CardHeader>
-                        <div className="m-1 md:m-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 xl:grid-cols-9 gap-4 justify-center">
+                <div className="inline-block rounded-md w-full my-0 text-center justify-center border-none outline-none">
+                    <h1 className={"text-2xl text-left font-bold underline"}>
+                        Technologies:
+                    </h1>
+                    <Card className="pt-4 bg-opacity-0 rounded-md border-none outline-none shadow-none">
+                        <div className="m-1 md:m-5 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-10 gap-4 justify-center">
                             {siteConfig.skills.map(({ name, image }: { name: string, image: string }) => (
                                 <div className="flex justify-center">
-                                <SkillCard
-                                    name={name}
-                                    image={image}
+                                    <SkillCard
+                                        name={name}
+                                        image={image}
                                     />
-                                </div>    
+                                </div>
                             ))}
                         </div>
                     </Card>
@@ -144,51 +142,54 @@ export default function IndexPage() {
             </section>
             <Divider className="my-6" />
             <section className="my-4 group w-full">
-                <h1 className="text-2xl w-full font-bold underline">Personal Projects:</h1> <br/>
-                <h2 className="text-xl w-full font-bold">Web Projects:</h2>
-                <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {siteConfig.projects.personal.web.map((proj: ProjectProps) => (
-                        <ProjectCard
-                            title={proj.title}
-                            subtitle={proj.subtitle}
-                            desc={proj.desc}
-                            github={proj.github}
-                            demo={proj.demo}
-                            chips={proj.chips}
-                            image={proj.image}
-                        />
-                    ))}
-                </div>
-                <h2 className="text-xl w-full font-bold">Mobile Projects:</h2>
-                <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {siteConfig.projects.personal.mobile.map((proj: ProjectProps) => (
-                        <ProjectCard
-                            title={proj.title}
-                            subtitle={proj.subtitle}
-                            desc={proj.desc}
-                            github={proj.github}
-                            demo={proj.demo}
-                            chips={proj.chips}
-                            image={proj.image}
-                        />
-                    ))}
-                </div>
-
-                <h2 className="text-xl w-full font-bold">Other Projects:</h2>
-                <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {siteConfig.projects.personal.other.map((proj: ProjectProps) => (
-                        <ProjectCard
-                            title={proj.title}
-                            subtitle={proj.subtitle}
-                            desc={proj.desc}
-                            github={proj.github}
-                            demo={proj.demo}
-                            chips={proj.chips}
-                            image={proj.image}
-                        />
-                    ))}
-                </div>
-
+                <h1 className="text-2xl w-full font-bold underline mb-3">Personal Projects:</h1>
+                <Tabs aria-label="Projects" size="md" variant={"underlined"} fullWidth>
+                    <Tab key="web" title="Web Projects">
+                        <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {siteConfig.projects.personal.web.map((proj: ProjectProps) => (
+                                <ProjectCard
+                                    title={proj.title}
+                                    subtitle={proj.subtitle}
+                                    desc={proj.desc}
+                                    github={proj.github}
+                                    demo={proj.demo}
+                                    chips={proj.chips}
+                                    image={proj.image}
+                                />
+                            ))}
+                        </div>
+                    </Tab>
+                    <Tab key="mobile" title="Mobile Projects">
+                        <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {siteConfig.projects.personal.mobile.map((proj: ProjectProps) => (
+                                <ProjectCard
+                                    title={proj.title}
+                                    subtitle={proj.subtitle}
+                                    desc={proj.desc}
+                                    github={proj.github}
+                                    demo={proj.demo}
+                                    chips={proj.chips}
+                                    image={proj.image}
+                                />
+                            ))}
+                        </div>
+                    </Tab>
+                    <Tab key="lowlevel" title="Low-Level Projects">
+                        <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {siteConfig.projects.personal.lowlevel.map((proj: ProjectProps) => (
+                                <ProjectCard
+                                    title={proj.title}
+                                    subtitle={proj.subtitle}
+                                    desc={proj.desc}
+                                    github={proj.github}
+                                    demo={proj.demo}
+                                    chips={proj.chips}
+                                    image={proj.image}
+                                />
+                            ))}
+                        </div>
+                    </Tab>
+                </Tabs>
             </section>
         </DefaultLayout>
     );

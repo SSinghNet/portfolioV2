@@ -13,8 +13,6 @@ export const siteConfig = {
 
         { name: "React", image: "images/react.png" },
         { name: "WordPress", image: "images/wordpress.png" },
-        { name: "CSS", image: "images/css.png" },
-        { name: "Tailwind", image: "images/tailwind.png" },
 
         { name: "Python", image: "images/python.png" },
         { name: "Java", image: "images/java.png" },
@@ -26,6 +24,9 @@ export const siteConfig = {
         { name: "Next.js", image: "images/nextjs.png" },
         { name: "Express.js", image: "images/expressjs.png" },
         
+        { name: "CSS", image: "images/css.png" },
+        { name: "Tailwind", image: "images/tailwind.png" },
+
         { name: "SQL", image: "images/sql.png" },
         { name: "Firebase", image: "images/firebase.png" },
         { name: "MySQL", image: "images/mysql.png" },
@@ -44,7 +45,7 @@ export const siteConfig = {
             {
                 title: "Rutgers myCommunity",
                 subtitle: "Rutgers OIT - Enterprise Application Services (2023 - Present)",
-                desc: "MyCommunity is an advanced online platform designed to facilitate seamless communication and engagement across the university. Built on WordPress and enhanced with the BuddyBoss plugin, MyCommunity supports both private and public group interactions, allowing students, faculty, and staff to connect and collaborate effectively. I am responsible for maintaining the site, developing custom plugins, and enhancing its appearance. I create new REST API endpoints, automate internal processes, and implement cron jobs for various tasks. Additionally, I address theme-related issues with custom JavaScript and CSS, ensuring a unified look across all Rutgers services. My efforts in maintaining and optimizing MyCommunity significantly improve its functionality and user experience.",
+                desc: "MyCommunity is an advanced online platform designed to facilitate seamless communication and engagement across the university. Built on WordPress and enhanced with the BuddyBoss plugin, MyCommunity supports both private and public group interactions, allowing students, faculty, and staff to connect and collaborate effectively. I am responsible for maintaining the site, developing custom plugins in PHP, and enhancing its appearance. I create new REST API endpoints, automate internal processes, and implement cron jobs for various tasks. Additionally, I address theme-related issues with custom JavaScript and CSS, ensuring a unified look across all Rutgers services.",
                 chips: ["PHP", "WordPress", "Buddyboss", "HTML", "CSS", "Javascript"],
                 image: "images/my_community.png"
             },
@@ -77,6 +78,13 @@ export const siteConfig = {
             ],
             mobile: [
                 {
+                    title: "Weather App",
+                    desc: "Cross-platform mobile Weather app made with the Flutter framework. Uses the OpenWeatherMap API to get location coordinates and the Open-Meteo API to get weather info.",
+                    chips: ["Flutter", "Dart"],
+                    image: "images/weather.png",
+                    github: "https://github.com/SSinghNet/weatherapp",
+                },
+                {
                     title: "Expense Tracker",
                     desc: "Cross-platform Expense Tracker mobile app made with the Flutter framework.",
                     chips: ["Flutter", "Dart"],
@@ -97,16 +105,16 @@ export const siteConfig = {
                     github: "https://github.com/SSinghNet/Tic-Tac-Toe",
                 }
             ],
-            other: [
+            lowlevel: [
                 {
                     title: "CLox",
-                    desc: "Lox is a object oriented, dynamically typed language. Clox is a compiler and bytecode VM built for the Lox language written in C. Clox does single pass compilation and compiles the code into custom bytecode that is interpreted by the VM. Clox uses its own custom garbage collector to manage memory. This language implementation is similar to that of Python, Ruby, and Lua.",
+                    desc: "CLox is a compiler and bytecode VM written in C for the object oriented & dynamically typed language, Lox. Clox does single pass compilation and compiles the code into custom bytecode that is interpreted by the VM. Clox uses its own custom garbage collector to manage memory. This language implementation is similar to that of Python, Ruby, and Lua.",
                     chips: ["C", "Lox"],
                     github: "https://github.com/SSinghNet/clox",
                 },
                 {
                     title: "JLox",
-                    desc: "Lox is a object oriented, dynamically typed language. JLox is an interpreter written for the Lox language in Java. It uses the JVM as the backbone to the interpreter and implements it with a \"tree-walk\" interpeter. The interpreter works by first scanning the code for tokens, which is fed into the parser to be turned into a list of statements, and then is given to the resolver to run the code.",
+                    desc: "JLox is an interpreter written in Java for the object oriented & dynamically typed language, Lox. It uses the JVM as the backbone to the interpreter and implements it with a \"tree-walk\" interpeter. The interpreter works by first scanning the code for tokens, which is fed into the parser to be turned into a list of statements, and then is given to the resolver to run the code.",
                     chips: ["Java", "Lox"],
                     github: "https://github.com/SSinghNet/jlox",
                 },
@@ -114,8 +122,6 @@ export const siteConfig = {
         }
             
                      
-            
-            
             
             // {
             //     title: "Merge Request Bot",

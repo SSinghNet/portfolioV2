@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: ProjectProps) {
     return (
         <div className="flex flex-col justify-center items-center">
-            <Card className="w-full border-1 border-foreground-100 transition duration-500 ease-in-out hover:border-blue-400 h-full flex" shadow="lg" disableAnimation={true}>
+            <Card className="w-full border-1 border-foreground-100 transition duration-500 ease-in-out hover:border-blue-400 h-full flex" shadow="md" disableAnimation={true}>
 
                 <CardHeader className="m-0 p-0 static justify-center">
                     {image ?

@@ -9,3 +9,8 @@ html {
     letter-spacing:0.01em;
     font-style: normal;
 }
+
+.text-xss{
+    font-size: 0.62rem /* 12px */;
+    line-height: 1rem /* 16px */;
+}
