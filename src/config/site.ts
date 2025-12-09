@@ -10,12 +10,15 @@ export const siteConfig = {
     },
     skills: [
         { name: "PHP", image: "images/php.png" },
+        { name: "Java", image: "images/java.png" },
+        { name: "Go", image: "images/go.svg" },
+
+        { name: "AWS", image: "images/aws.jpg" },
 
         { name: "React", image: "images/react.png" },
         { name: "WordPress", image: "images/wordpress.png" },
 
         { name: "Python", image: "images/python.png" },
-        { name: "Java", image: "images/java.png" },
         { name: "C", image: "images/c.png" },
 
         { name: "Javascript", image: "images/javascript.png" },
@@ -23,7 +26,7 @@ export const siteConfig = {
         { name: "Node.js", image: "images/nodejs.png" },
         { name: "Next.js", image: "images/nextjs.png" },
         { name: "Express.js", image: "images/expressjs.png" },
-        
+
         { name: "CSS", image: "images/css.png" },
         { name: "Tailwind", image: "images/tailwind.png" },
 
@@ -31,113 +34,175 @@ export const siteConfig = {
         { name: "Firebase", image: "images/firebase.png" },
         { name: "MySQL", image: "images/mysql.png" },
         { name: "MongoDB", image: "images/mongodb.png" },
-        { name: "AWS", image: "images/aws.jpg" },
-        
+
         { name: "Flutter", image: "images/flutter.png" },
-        
+
         { name: "GitHub", image: "images/github.png" },
         { name: "Linux", image: "images/linux.png" },
-        
+
         // { name: "", image: "images/.png"},
     ],
     projects: {
         professional: [
             {
-                title: "Rutgers myCommunity",
+                title: "Student Software Engineer",
                 subtitle: "Rutgers OIT - Enterprise Application Services (2023 - Present)",
-                desc: "MyCommunity is an advanced online platform designed to facilitate seamless communication and engagement across the university. Built on WordPress and enhanced with the BuddyBoss plugin, MyCommunity supports both private and public group interactions, allowing students, faculty, and staff to connect and collaborate effectively. I am responsible for maintaining the site, developing custom plugins in PHP, and enhancing its appearance. I create new REST API endpoints, automate internal processes, and implement cron jobs for various tasks. Additionally, I address theme-related issues with custom JavaScript and CSS, ensuring a unified look across all Rutgers services.",
-                chips: ["PHP", "WordPress", "Buddyboss", "HTML", "CSS", "Javascript"],
+                desc: "Enhanced Rutgers’ myCommunity platform, a large-scale WordPress system serving 50,000+ students and 1,000+ organizations. Led new feature development, infrastructure updates, and performance improvements across PHP, WordPress, and BuddyBoss. Automated event workflows with custom PHP plugins and optimized queries, improving site performance by 50%. Designed and documented internal REST APIs with OpenAPI 3.0 and Swagger UI. Built a real-time data sync between Rutgers’ Club Database and myCommunity using PHP and cron jobs, automatically syncing records for 1,000+ clubs. Modernized the user experience by refactoring themes with JavaScript and CSS, adding dark mode, improving accessibility, and ensuring responsive design. Also developed React demos and Flutter prototypes to validate new features with stakeholders.",
+                chips: [
+                    "PHP",
+                    "WordPress",
+                    "BuddyBoss",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "REST APIs",
+                    "OpenAPI",
+                    "MySQL",
+                    "Firestore",
+                    "Cron Jobs",
+                    "React",
+                    "Flutter"
+                ],
                 image: "images/my_community.png"
             },
+
             {
-                title: "Student Information System",
-                subtitle: "Mount Olive Robotics Team (2019 - 2023)",
-                desc: "Created a full student information system that stores sensitive information about each student in a MongoDB database, to be used in emergency situations. Implements a secure login system to keep sensitive information safe.",
-                chips: ["Node.js", "Express.js", "Pug (Jade)", "HTML", "Javascript", "CSS", "MongoDB", "NoSQL"],
-                github: "https://github.com/SSinghNet/StudentInformationSystem",
+                title: "Software Engineer Intern",
+                subtitle: "Universal Selfcare LLC (2025 - Present)",
+                desc: "Built secure and scalable backend features in Go for a healthcare SaaS platform. Refactored the backend into a consistent controller–service–repository architecture, reducing duplication and improving maintainability. Configured Google Cloud Platform IAM for role-based access control and deployed PostgreSQL Cloud SQL to ensure secure and compliant handling of sensitive healthcare data.",
+                chips: [
+                    "Go",
+                    "Microservices",
+                    "Controller–Service–Repository",
+                    "Google Cloud Platform",
+                    "IAM",
+                    "PostgreSQL"
+                ],
+            }
+        ],
+
+        personal: [
+
+            {
+                title: "AI Playlist Generator",
+                desc:
+                    "I developed an AI-powered playlist generator that interprets natural language prompts to create personalized music playlists. The backend is built in Java using Spring Boot microservices, with Spring AI and Gemini 2.5 powering the prompt interpretation. The system integrates with the Spotify Web API for metadata retrieval, user authentication, and playlist exporting. It follows a microservice architecture managed by Spring Cloud Eureka for service discovery and load balancing. Each service is containerized and deployed using AWS ECS Fargate, with Docker images stored in AWS ECR. An AWS Application Load Balancer routes external traffic, securely exposing only the API Gateway. The frontend is a responsive and user-friendly Next.js (React) application hosted on Vercel, providing a seamless experience from login to playlist creation.",
+                chips:
+                    [
+                        "Java", "Spring Boot", "Spring AI", "Gemini 2.5",
+                        "Microservices", "Spring Cloud Eureka", "Spotify API",
+                        "Docker", "AWS ECS", "AWS Fargate", "AWS ECR",
+                        "AWS Application Load Balancer", "Next.js", "React",
+                        "Vercel", "API Gateway"
+                    ],
+                image:
+                    "images/aiplaylist.png",
+                github:
+                    "https://github.com/SSinghNet/ai-playlist",
+                demo:
+                    "https://aiplaylist.ssingh.net/"
+            },
+            {
+                title: "SSingh.Net Music",
+                desc:
+                    "SSingh.Net Music is a dynamic music blog built with Node.js and Express.js for the backend and React with Tailwind CSS for the frontend. It features a custom-built RESTful API to manage and manipulate data related to albums, artists, tags, and more. The application uses a MySQL database for structured data storage and integrates with an AWS S3 bucket for efficient image storage and retrieval.",
+                chips:
+                    ["JavaScript", "TypeScript", "React", "Tailwind", "Express.js", "Node.js", "SQL", "MySQL", "AWS S3"],
+                image:
+                    "images/SSinghNetMusic.png",
+                github:
+                    "https://github.com/SSinghNet/music.ssingh.net",
+                demo:
+                    "https://music.ssingh.net/"
+            },
+            {
+                title: "CLox",
+                desc:
+                    "CLox is a compiler and bytecode VM written in C for the object oriented & dynamically typed language, Lox. Clox does single pass compilation and compiles the code into custom bytecode that is interpreted by the VM. Clox uses its own custom garbage collector to manage memory. This language implementation is similar to that of Python, Ruby, and Lua.",
+                chips:
+                    ["C", "Lox"],
+                github:
+                    "https://github.com/SSinghNet/clox",
+            },
+            {
+                title: "JLox",
+                desc:
+                    "JLox is an interpreter written in Java for the object oriented & dynamically typed language, Lox. It uses the JVM as the backbone to the interpreter and implements it with a \"tree-walk\" interpeter. The interpreter works by first scanning the code for tokens, which is fed into the parser to be turned into a list of statements, and then is given to the resolver to run the code.",
+                chips:
+                    ["Java", "Lox"],
+                github:
+                    "https://github.com/SSinghNet/jlox",
+            },
+
+            {
+                title: "SSingh.Net Music Admin Portal",
+                desc:
+                    "SSingh.Net Music is a dynamic music blog built with Node.js and Express.js for the backend and React with Tailwind CSS for the frontend. It features a custom-built RESTful API to manage and manipulate data related to albums, artists, tags, and more. The application uses a MySQL database for structured data storage and integrates with an AWS S3 bucket for efficient image storage and retrieval.",
+                chips:
+                    ["TypeScript", "React", "Tailwind"],
+                image:
+                    "images/musicadmin.png",
+                github:
+                    "https://github.com/SSinghNet/musicadminmodern"
+            },
+            // {
+            //     title: "Weather App",
+            //     desc:
+            //         "Cross-platform mobile Weather app made with the Flutter framework. Uses the OpenWeatherMap API to get location coordinates and the Open-Meteo API to get weather info.",
+            //     chips:
+            //         ["Flutter", "Dart"],
+            //     image:
+            //         "images/weather.png",
+            //     github:
+            //         "https://github.com/SSinghNet/weatherapp",
+            // },
+            // {
+            //     title: "Word Matters",
+            //     desc:
+            //         "Word puzzle game built for Android with Java and Android Studio",
+            //     chips:
+            //         ["Java", "Android Studio"],
+            //     image:
+            //         "images/WordMatters.png",
+            //     github:
+            //         "https://github.com/SSinghNet/WordMatters",
+            // },
+            {
+                title: "S.SSingh.Net",
+                desc:
+                    "A url shortener built with PHP that uses a MySQL database.",
+                chips:
+                    ["PHP", "MySQL", "SQL", "CSS"],
+                image:
+                    "images/SSSinghNet.png",
+                github:
+                    "https://github.com/SSinghNet/S.SSingh.Net",
+                demo:
+                    "https://s.ssingh.net/"
             },
         ],
-        personal: {
-            web: [
-                {
-                    title: "SSingh.Net Music",
-                    desc: "A dynamic music blog built with Node.js & Express.js. Leverages Bootstrap to create the front-end design. Utilizes a custom-built RESTful API to insert data about albums, artists, tags, etc. Uses a MySQL Database to store data and an AWS S3 Bucket to store images.",
-                    chips: ["Node.js", "Express.js", "Pug (Jade)", "HTML", "Javascript", "CSS", "Bootstrap", "SQL", "MySQL", "AWS"],
-                    image: "images/SSinghNetMusic.png",
-                    github: "https://github.com/SSinghNet/music.ssingh.net",
-                    demo: "https://music.ssingh.net/"
-                },
-                {
-                    title: "S.SSingh.Net",
-                    desc: "A url shortener built with PHP that uses a MySQL database.",
-                    chips: ["PHP", "MySQL", "SQL", "CSS"],
-                    image: "images/SSSinghNet.png",
-                    github: "https://github.com/SSinghNet/S.SSingh.Net",
-                    demo: "https://s.ssingh.net/"
-                },
-            ],
-            mobile: [
-                {
-                    title: "Weather App",
-                    desc: "Cross-platform mobile Weather app made with the Flutter framework. Uses the OpenWeatherMap API to get location coordinates and the Open-Meteo API to get weather info.",
-                    chips: ["Flutter", "Dart"],
-                    image: "images/weather.png",
-                    github: "https://github.com/SSinghNet/weatherapp",
-                },
-                {
-                    title: "Expense Tracker",
-                    desc: "Cross-platform Expense Tracker mobile app made with the Flutter framework.",
-                    chips: ["Flutter", "Dart"],
-                    image: "images/expense.png",
-                    github: "https://github.com/SSinghNet/expense_tracker",
-                },
-                {
-                    title: "Word Matters",
-                    desc: "Word puzzle game built for Android with Java and Android Studio",
-                    chips: ["Java", "Android Studio"],
-                    image: "images/WordMatters.png",
-                    github: "https://github.com/SSinghNet/WordMatters",
-                },
-                {
-                    title: "Tic-Tac-Toe",
-                    desc: "A Simple Tic-Tac-Toe game for Android built with Java and Android Studio",
-                    chips: ["Java", "Android Studio"],
-                    github: "https://github.com/SSinghNet/Tic-Tac-Toe",
-                }
-            ],
-            lowlevel: [
-                {
-                    title: "CLox",
-                    desc: "CLox is a compiler and bytecode VM written in C for the object oriented & dynamically typed language, Lox. Clox does single pass compilation and compiles the code into custom bytecode that is interpreted by the VM. Clox uses its own custom garbage collector to manage memory. This language implementation is similar to that of Python, Ruby, and Lua.",
-                    chips: ["C", "Lox"],
-                    github: "https://github.com/SSinghNet/clox",
-                },
-                {
-                    title: "JLox",
-                    desc: "JLox is an interpreter written in Java for the object oriented & dynamically typed language, Lox. It uses the JVM as the backbone to the interpreter and implements it with a \"tree-walk\" interpeter. The interpreter works by first scanning the code for tokens, which is fed into the parser to be turned into a list of statements, and then is given to the resolver to run the code.",
-                    chips: ["Java", "Lox"],
-                    github: "https://github.com/SSinghNet/jlox",
-                },
-            ]
+
+    },
+
+    certificates: [
+        {
+            name: "AWS Certified Solutions Architect - Associate",
+            provider: "Amazon Web Services",
+            link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/a230c8845f2a474686494db23896d2ed",
+            issueDate: "8/11/2025",
+            expiryDate: "8/11/2028",
+            image: "images/aws-certified-solutions-architect-associate.png",
         }
-            
-                     
-            
-            // {
-            //     title: "Merge Request Bot",
-            //     desc: "A Discord Bot that generates the above image with specified text on top.",
-            //     chips: ["Python", "Discord API"],
-            //     image: "images/mergerequest.jpg",
-            //     github: "https://github.com/SSinghNet/MergeRequestBot",
-            // },
-            // {
-            //     title: "Realtime API",
-            //     desc: "RESTful Flask API for my high school's student information system made with Python and the Flask framework. Gets all information through web scraping and the requests library. Ability to get grades, class information, and other miscellaneous information.",
-            //     chips: ["Python", "Flask"],
-            //     github: "https://github.com/SSinghNet/mtoliverealtimeflask",
-            // },
-            
-    }
+    ]
+        ,
+        education: [
+            {
+                institution: "Rutgers University - New Brunswick",
+                location: "New Brunswick, NJ",
+                degree: "B.S. in Computer Science, B.S. in Mathematics",
+                dates: "September 2023 - May 2026",
+            }
+        ]
 };
 
 export interface ProjectProps {
