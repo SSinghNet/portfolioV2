@@ -50,7 +50,7 @@ export const siteConfig = {
       {
         title: "Software Engineer",
         subtitle:
-          "Rutgers University",
+          "Rutgers University (August 2023 - Present)",
         desc: "Enhanced Rutgers' myCommunity platform, a large-scale WordPress system serving 50,000+ students and 1,000+ organizations. Led new feature development, infrastructure updates, and performance improvements across PHP, WordPress, and BuddyBoss. Automated event workflows with custom PHP plugins and optimized queries, improving site performance by 50%. Designed and documented internal REST APIs with OpenAPI 3.0 and Swagger UI. Built a real-time data sync between Rutgers' Club Database and myCommunity using PHP and cron jobs, automatically syncing records for 1,000+ clubs. Modernized the user experience by refactoring themes with JavaScript and CSS, adding dark mode, improving accessibility, and ensuring responsive design. Also developed React demos and Flutter prototypes to validate new features with stakeholders.",
         chips: [
           "PHP",
