@@ -8,7 +8,6 @@ import ProjectCard from "@/components/projectCard";
 import SkillCard from "@/components/skillCard";
 import CertificateCard from "@/components/certificateCard";
 import EducationCard from "@/components/educationCard";
-import { title } from '../components/primitives';
 
 export default function IndexPage() {
     return (
