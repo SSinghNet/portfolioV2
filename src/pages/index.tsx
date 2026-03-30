@@ -8,6 +8,7 @@ import ProjectCard from "@/components/projectCard";
 import SkillCard from "@/components/skillCard";
 import CertificateCard from "@/components/certificateCard";
 import EducationCard from "@/components/educationCard";
+import { title } from '../components/primitives';
 
 export default function IndexPage() {
     return (
@@ -17,8 +18,8 @@ export default function IndexPage() {
                 {/* Hero */}
                 <section className="w-full flex items-center justify-center pt-16 pb-8">
                     <div className="max-w-3xl w-full text-center rounded-2xl shadow-lg p-8 border card">
-                        <h1 className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--accent-strong)' }}>Sumeet Singh</h1>
-                        <h2 className="text-lg md:text-xl font-medium mb-4" style={{ color: 'var(--accent)' }}>Backend Software Engineer</h2>
+                        <h1 className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--accent-strong)' }}>{siteConfig.name}</h1>
+                        <h2 className="text-lg md:text-xl font-medium mb-4" style={{ color: 'var(--accent)' }}>{siteConfig.description}</h2>
                         {/* <p className="mb-6" style={{ color: 'var(--muted)' }}>
                             Building scalable, reliable systems and elegant developer experiences — cloud, APIs, and open source.
                         </p> */}

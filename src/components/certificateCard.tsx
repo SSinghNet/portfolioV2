@@ -67,7 +67,8 @@ export default function CertificateCard({
                             <div className="flex-1">
                                 <h2 className="text-lg font-semibold" style={{color: 'var(--text-primary)'}}>{name}</h2>
                                 {provider ? <div className="text-sm text-muted" style={{color: 'var(--muted)'}}>{provider}</div> : null}
-                                <div className="text-sm mt-2 text-muted" style={{color: 'var(--muted)'}}>Issued: {issueDate ?? "-"} • Expires: {expiryDate ?? "-"}</div>
+                                <div className="text-sm mt-1 text-muted" style={{ color: 'var(--muted)' }}>Issued: {issueDate ?? "-"}</div>
+                                <div className="text-sm mt-1 text-muted" style={{ color: 'var(--muted)' }}>{expiryDate ? "Expires: " + expiryDate : ""}</div>
                             </div>
 
                             <div className="flex-shrink-0 self-start">
