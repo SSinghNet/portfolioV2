@@ -2,56 +2,58 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
     name: "Sumeet Singh",
-    description: "Sumeet Singh - Fullstack Developer",
+    description: "Sumeet Singh - Backend Software Engineer",
     links: {
         github: "https://github.com/SSinghNet",
         email: "sumeet605@gmail.com",
         linkedin: "https://www.linkedin.com/in/sumeet-singh-net",
     },
-    skills: [
-        { name: "PHP", image: "images/php.png" },
-        { name: "Java", image: "images/java.png" },
-        { name: "Go", image: "images/go.svg" },
+    skills: {
+        languages: [
+            { name: "Java", image: "images/java.png" },
+            { name: "PHP", image: "images/php.png" },
+            { name: "Go", image: "images/go.svg" },
+            { name: "Typescript", image: "images/typescript.png" },
+            { name: "Javascript", image: "images/javascript.png" },
+            { name: "C", image: "images/c.png" },
+            { name: "Python", image: "images/python.png" },
+            { name: "SQL", image: "images/sql.png" },
+            // { name: "CSS", image: "images/css.png" },
+        ],
+        frameworks: [
+            { name: "WordPress", image: "images/wordpress.png" },
+            { name: "Spring Boot", image: "images/springboot.png" },
+            { name: "React", image: "images/react.png" },
+            { name: "Next.js", image: "images/nextjs.png" },
+            { name: "Node.js", image: "images/nodejs.png" },
+            { name: "Express.js", image: "images/expressjs.png" },
+            { name: "Flutter", image: "images/flutter.png" },
+            { name: "Tailwind", image: "images/tailwind.png" },
+        ],
+        dev: [
+            { name: "AWS", image: "images/aws.jpg" },
+            { name: "GCP", image: "images/gcp.png" },
+            { name: "Docker", image: "images/docker.png" },
 
-        { name: "AWS", image: "images/aws.jpg" },
+            { name: "MySQL", image: "images/mysql.png" },
+            { name: "MariaDB", image: "images/mariadb.png" },
+            { name: "PostgreSQL", image: "images/postgresql.png" },
+            { name: "Firebase", image: "images/firebase.png" },
 
-        { name: "React", image: "images/react.png" },
-        { name: "WordPress", image: "images/wordpress.png" },
+            { name: "Git", image: "images/github.png" },
 
-        { name: "Python", image: "images/python.png" },
-        { name: "C", image: "images/c.png" },
-
-        { name: "Javascript", image: "images/javascript.png" },
-        { name: "Typescript", image: "images/typescript.png" },
-        { name: "Node.js", image: "images/nodejs.png" },
-        { name: "Next.js", image: "images/nextjs.png" },
-        { name: "Express.js", image: "images/expressjs.png" },
-
-        { name: "CSS", image: "images/css.png" },
-        { name: "Tailwind", image: "images/tailwind.png" },
-
-        { name: "SQL", image: "images/sql.png" },
-        { name: "Firebase", image: "images/firebase.png" },
-        { name: "MySQL", image: "images/mysql.png" },
-        { name: "MongoDB", image: "images/mongodb.png" },
-
-        { name: "Flutter", image: "images/flutter.png" },
-
-        { name: "GitHub", image: "images/github.png" },
-        { name: "Linux", image: "images/linux.png" },
-
-        // { name: "", image: "images/.png"},
-    ],
+            // { name: "", image: "images/.png"},
+        ],
+    },
     projects: {
         professional: [
             {
                 title: "Student Software Engineer",
-                subtitle: "Rutgers OIT - Enterprise Application Services (2023 - Present)",
-                desc: "Enhanced Rutgers’ myCommunity platform, a large-scale WordPress system serving 50,000+ students and 1,000+ organizations. Led new feature development, infrastructure updates, and performance improvements across PHP, WordPress, and BuddyBoss. Automated event workflows with custom PHP plugins and optimized queries, improving site performance by 50%. Designed and documented internal REST APIs with OpenAPI 3.0 and Swagger UI. Built a real-time data sync between Rutgers’ Club Database and myCommunity using PHP and cron jobs, automatically syncing records for 1,000+ clubs. Modernized the user experience by refactoring themes with JavaScript and CSS, adding dark mode, improving accessibility, and ensuring responsive design. Also developed React demos and Flutter prototypes to validate new features with stakeholders.",
+                subtitle: "Rutgers OIT - Enterprise Application Services (August 2023 - Present)",
+                desc: "Enhanced Rutgers' myCommunity platform, a large-scale WordPress system serving 50,000+ students and 1,000+ organizations. Led new feature development, infrastructure updates, and performance improvements across PHP, WordPress, and BuddyBoss. Automated event workflows with custom PHP plugins and optimized queries, improving site performance by 50%. Designed and documented internal REST APIs with OpenAPI 3.0 and Swagger UI. Built a real-time data sync between Rutgers' Club Database and myCommunity using PHP and cron jobs, automatically syncing records for 1,000+ clubs. Modernized the user experience by refactoring themes with JavaScript and CSS, adding dark mode, improving accessibility, and ensuring responsive design. Also developed React demos and Flutter prototypes to validate new features with stakeholders.",
                 chips: [
                     "PHP",
                     "WordPress",
-                    "BuddyBoss",
                     "HTML",
                     "CSS",
                     "JavaScript",
@@ -68,12 +70,12 @@ export const siteConfig = {
 
             {
                 title: "Software Engineer Intern",
-                subtitle: "Universal Selfcare LLC (2025 - Present)",
-                desc: "Built secure and scalable backend features in Go for a healthcare SaaS platform. Refactored the backend into a consistent controller–service–repository architecture, reducing duplication and improving maintainability. Configured Google Cloud Platform IAM for role-based access control and deployed PostgreSQL Cloud SQL to ensure secure and compliant handling of sensitive healthcare data.",
+                subtitle: "Universal Selfcare LLC (September 2025 - December 2025)",
+                desc: "Built secure and scalable backend features in Go for a healthcare SaaS platform. Refactored the backend into a consistent controller-service-repository architecture, reducing duplication and improving maintainability. Configured Google Cloud Platform IAM for role-based access control and deployed PostgreSQL Cloud SQL to ensure secure and compliant handling of sensitive healthcare data.",
                 chips: [
                     "Go",
                     "Microservices",
-                    "Controller–Service–Repository",
+                    "Controller-Service-Repository",
                     "Google Cloud Platform",
                     "IAM",
                     "PostgreSQL"
@@ -194,15 +196,15 @@ export const siteConfig = {
             image: "images/aws-certified-solutions-architect-associate.png",
         }
     ]
-        ,
-        education: [
-            {
-                institution: "Rutgers University - New Brunswick",
-                location: "New Brunswick, NJ",
-                degree: "B.S. in Computer Science, B.S. in Mathematics",
-                dates: "September 2023 - May 2026",
-            }
-        ]
+    ,
+    education: [
+        {
+            institution: "Rutgers University - New Brunswick",
+            location: "New Brunswick, NJ",
+            degree: "B.S. in Computer Science, B.S. in Mathematics",
+            dates: "September 2023 - May 2026",
+        }
+    ]
 };
 
 export interface ProjectProps {

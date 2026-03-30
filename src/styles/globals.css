@@ -4,13 +4,90 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    font-family: "Didact Gothic", sans-serif;
-    letter-spacing:0.01em;
-    font-style: normal;
+/* Define theme-aware CSS variables. The `use-theme` hook toggles the `light`/`dark` class on <html>. */
+:root {
+  --bg-start: #f5f3f0; /* very soft warm beige */
+  --bg-end: #faf8f6;
+  --text-primary: #2a2a2a; /* very dark for readability */
+  --muted: #5a5a5a;
+  --card-bg: rgba(255,255,255,0.85);
+  --accent: #6b5a85; /* softer purple works in both modes */
+  --accent-strong: #4a3a65;
 }
 
-.text-xss{
-    font-size: 0.62rem /* 12px */;
-    line-height: 1rem /* 16px */;
+.light {
+  --bg-start: #f5f3f0; /* very soft warm beige */
+  --bg-end: #faf8f6;
+  --text-primary: #2a2a2a; /* very dark for readability */
+  --muted: #5a5a5a;
+  --card-bg: rgba(255,255,255,0.85);
+  --accent: #6b5a85; /* softer purple works in both modes */
+  --accent-strong: #4a3a65;
+}
+
+.dark {
+  --bg-start: #1f2533; /* slightly lighter dark slate */
+  --bg-end: #151c2a;
+  --text-primary: #e0e0e0; /* slightly less bright for gentler feel */
+  --muted: #9a9fa8; /* lighter gray for readability */
+  --card-bg: rgba(35,42,60,0.65);
+  --accent: #a892c7; /* lighter purple that works on dark bg */
+  --accent-strong: #c7b4e8;
+}
+
+html {
+    font-family: "Didact Gothic", sans-serif;
+    letter-spacing: 0.01em;
+    font-style: normal;
+    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    min-height: 100vh;
+}
+
+body {
+    color: var(--text-primary);
+    background: transparent;
+}
+
+.text-xss {
+    font-size: 0.62rem;
+    line-height: 1rem;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+    border: 1px solid rgba(124,58,237,0.08);
+    background: var(--card-bg);
+}
+
+.btn-primary {
+    @apply text-white font-semibold py-2 px-4 rounded-lg shadow transition;
+    background: linear-gradient(90deg,var(--accent-strong),var(--accent));
+}
+
+/* Small utility: subtle accent underline for headings */
+.accent-underline {
+  background-image: linear-gradient(90deg,var(--accent),transparent);
+  background-repeat: no-repeat;
+  background-size: 40% 3px;
+  background-position: left 100%;
+}
+
+/* Dark mode overrides for NextUI components */
+.dark [class*="bg-foreground"] {
+  background-color: var(--card-bg) !important;
+  border-color: rgba(110, 231, 183, 0.1) !important;
+}
+
+.dark [class*="border-foreground"] {
+  border-color: rgba(110, 231, 183, 0.1) !important;
+}
+
+.dark .dark\:bg-default {
+  background-color: var(--card-bg) !important;
+}
+
+/* Ensure text is visible in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
+  color: var(--text-primary);
 }

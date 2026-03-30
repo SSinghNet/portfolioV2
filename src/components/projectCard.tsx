@@ -1,8 +1,7 @@
-import { Card, CardBody, CardFooter, CardHeader, Chip, Image, Tooltip } from "@nextui-org/react";
+import { Image, Tooltip, Chip } from "@nextui-org/react";
 import { DemoIcon, GithubIcon } from "./icons";
 import { Link } from "@nextui-org/link";
 
-import { button as buttonStyles } from "@nextui-org/theme";
 import { ProjectProps } from "@/config/site";
 
 export default function ProjectCard({
@@ -16,52 +15,55 @@ export default function ProjectCard({
 }: ProjectProps) {
     return (
         <div className="flex flex-col justify-center items-center">
-            <Card className="w-full border-1 border-foreground-100 transition duration-500 ease-in-out hover:border-blue-400 h-full flex" shadow="md" disableAnimation={true}>
+            <div className="w-full card transition duration-500 ease-in-out overflow-hidden flex flex-col h-full" style={{ borderColor: 'rgba(181, 157, 217, 0.2)' }}>
 
-                <CardHeader className="m-0 p-0 static justify-center">
-                    {image ?
-                        <Image
-                            className="h-48 max-w-fit m-0 p-0 rounded-none justify-center"
-                            src={"./" + image}
-                            shadow="sm"
-                        />
-                        : 
-                        <div className="flex h-48 m-0 p-0 border-1 border-foreground-100 w-full rounded-none justify-center shadow-md">
-                            <span className="content-center text-xl max-w-fit">
+                <div className="m-0 p-0 relative flex justify-center">
+                    <div className="flex h-48 m-0 p-0 w-full rounded-none justify-center shadow-md" style={{ background: 'var(--card-bg)' }}>
+                        {image ?
+                            <Image
+                                className="h-48 object-cover rounded-none m-0 p-0"
+                                src={"./" + image}
+                                shadow="none"
+                            />
+                            :
+
+                            <span className="content-center text-xl max-w-fit" style={{ color: 'var(--text-primary)' }}>
                                 {title}
                             </span>
-                        </div>
+                        }
+
+                    </div>
+                </div>
+                <div className="flex gap-2 px-4 pt-3 pb-2">
+                    {demo ?
+                        <Tooltip content="Demo" showArrow={true}>
+                            <Link isExternal href={demo} className="flex items-center justify-center px-3 py-2 rounded-lg font-semibold transition hover:opacity-80" style={{ background: 'var(--accent)', color: 'var(--bg-start)' }}>
+                                <DemoIcon className="p-0 m-0" size={18} />
+                            </Link>
+                        </Tooltip>
+                        : ""
                     }
                     {github ?
                         <Tooltip content="GitHub" showArrow={true}>
-                            <Link isExternal href={github} className={buttonStyles({ variant: "light", radius: "full" }) + " bg-foreground-100 w-min min-w-10 p-0 text-sm absolute bottom-2 right-2 z-10"}>
-                                <GithubIcon className="p-0 m-0"/>
+                            <Link isExternal href={github} className="flex items-center justify-center px-3 py-2 rounded-lg font-semibold transition hover:opacity-80" style={{ background: 'var(--muted)', color: 'var(--bg-start)' }}>
+                                <GithubIcon className="p-0 m-0" size={18} />
                             </Link>
                         </Tooltip>
                         : ""
                     }
-                    {demo ?
-                        <Tooltip content="Demo" showArrow={true}>
-                            <Link isExternal href={demo} className={buttonStyles({ variant: "light", radius: "full" }) + " bg-foreground-100 w-min min-w-10 p-0 text-sm absolute bottom-2 left-2 z-10"}>
-                                <DemoIcon className="p-0 m-0" />
-                            </Link>
-                        </Tooltip>
-                        : ""
-                    }
-                </CardHeader>
-                <CardBody className="content-center">
-                    <h1 className="text-xl font-semibold">{title}</h1>
-                    <h1 className="text-medium font-medium">{subtitle}</h1>
-                    <p className="text-sm my-1">{desc}</p>
-                </CardBody>
+                </div>
+                <div className="flex-1 p-4">
+                    <h1 className="text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>{title}</h1>
+                    <h2 className="text-sm font-medium" style={{ color: 'var(--accent)' }}>{subtitle}</h2>
+                    <p className="text-sm my-2" style={{ color: 'var(--muted)' }}>{desc}</p>
+                </div>
 
-                <CardFooter className="gap-1 text-center justify-center w-full block">
-                    {chips.map((str) => (
-                        <Chip radius="full" className="p-0 text-xs m-1">{str}</Chip>
+                <div className="flex flex-wrap gap-2 px-4 pb-4">
+                    {chips.map((str, idx) => (
+                        <Chip key={idx} radius="full" className="text-xs" style={{ background: 'var(--card-bg)', color: 'var(--accent-strong)', fontWeight: '600', border: '1px solid var(--accent)' }}>{str}</Chip>
                     ))}
-                </CardFooter>
-                <div className="mb-14"></div>
-            </Card>
+                </div>
+            </div>
         </div>
     );
 }
