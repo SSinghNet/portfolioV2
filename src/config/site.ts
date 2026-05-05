@@ -49,8 +49,7 @@ export const siteConfig = {
     professional: [
       {
         title: "Software Engineer",
-        subtitle:
-          "Rutgers University (August 2023 - Present)",
+        subtitle: "Rutgers University (August 2023 - Present)",
         desc: "Enhanced Rutgers' myCommunity platform, a large-scale WordPress system serving 50,000+ students and 1,000+ organizations. Led new feature development, infrastructure updates, and performance improvements across PHP, WordPress, and BuddyBoss. Automated event workflows with custom PHP plugins and optimized queries, improving site performance by 50%. Designed and documented internal REST APIs with OpenAPI 3.0 and Swagger UI. Built a real-time data sync between Rutgers' Club Database and myCommunity using PHP and cron jobs, automatically syncing records for 1,000+ clubs. Modernized the user experience by refactoring themes with JavaScript and CSS, adding dark mode, improving accessibility, and ensuring responsive design. Also developed React demos and Flutter prototypes to validate new features with stakeholders.",
         chips: [
           "PHP",
@@ -110,6 +109,24 @@ export const siteConfig = {
         github: "https://github.com/SSinghNet/ai-playlist",
         demo: "https://aiplaylist.ssingh.net/",
       },
+
+      {
+        title: "Whisk",
+        desc: "Whisk is a cross-platform cooking app built with React Native and Expo that features barcode scanning for pantry management and recipe discovery. It integrates Groq to generate LLM-powered recipe suggestions grounded in the user's current pantry inventory. The backend is a Node.js/Express.js REST API using Prisma ORM against a Supabase Postgres database, with unit and integration tests written in Jest to validate API logic and data layer behavior.",
+        chips: [
+          "TypeScript",
+          "React Native",
+          "Expo",
+          "Node.js",
+          "Express.js",
+          "Prisma",
+          "Zod",
+          "Supabase",
+          "Jest",
+          "Groq",
+        ],
+        github: "https://github.com/SSinghNet/Whisk",
+      },
       {
         title: "SSingh.Net Music",
         desc: "SSingh.Net Music is a dynamic music blog built with Node.js and Express.js for the backend and React with Tailwind CSS for the frontend. It features a custom-built RESTful API to manage and manipulate data related to albums, artists, tags, and more. The application uses a MySQL database for structured data storage and integrates with an AWS S3 bucket for efficient image storage and retrieval.",
@@ -133,6 +150,12 @@ export const siteConfig = {
         desc: "CLox is a compiler and bytecode VM written in C for the object oriented & dynamically typed language, Lox. Clox does single pass compilation and compiles the code into custom bytecode that is interpreted by the VM. Clox uses its own custom garbage collector to manage memory. This language implementation is similar to that of Python, Ruby, and Lua.",
         chips: ["C", "Lox"],
         github: "https://github.com/SSinghNet/clox",
+      },
+      {
+        title: "LinkBase",
+        desc: "LinkBase is a Linktree-style application built with Laravel and Blade that lets users create customizable landing pages with personalized links and themes. It features secure authentication with login/signup workflows and user-specific routing for seamless profile management. The app includes a full analytics system tracking page views, per-link clicks, and user agent data, with analytics processing handled asynchronously via Laravel queues to reduce request latency and maintain scalability under load.",
+        chips: ["PHP", "Laravel", "Blade", "Tailwind CSS"],
+        github: "https://github.com/SSinghNet/Linkbase",
       },
       {
         title: "JLox",
