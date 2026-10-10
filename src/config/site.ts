@@ -53,11 +53,20 @@ export const siteConfig = {
 
   work: [
     {
+      role: "Software Engineer",
+      company: "Citi",
+      dates: "September 2026 – Present",
+      bullets: [
+        "Applications Development Intermediate Programmer Analyst on the Markets Technology Risk Services team",
+      ],
+      chips: [],
+    },
+    {
       role: "Agentic Engineer",
       company: "Noom",
-      dates: "June 2026 – Present",
+      dates: "June 2026 – September 2026",
       bullets: [
-        "Building the future of agentic systems.",
+        "Designed and built an agentic AI platform on AWS that enables non-technical teams to automate workflows and complete complex business tasks without engineering support",
       ],
       chips: ["Python", "AWS", "CloudFormation", "Docker", "LLMs", "Agentic AI"],
     },
